@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class ServerComponent {
   id: number = 20;
   online: boolean = true;
+
+  getServerStatus() {
+    return this.online;
+  }
 }
