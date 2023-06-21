@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./server-group.component.css'],
 })
 export class ServerGroupComponent {
-  onAddServer() {}
+  addServerFormVisible: boolean = false;
+  newServerName: string = '';
+
+  onAddServer() {
+    this.addServerFormVisible = !this.addServerFormVisible;
+  }
+
+  onSubmitNewServer(event: any) {
+    event.preventDefault();
+    this.newServerName = (<HTMLInputElement>event.target).value;
+    console.log(this.newServerName);
+  }
 }
