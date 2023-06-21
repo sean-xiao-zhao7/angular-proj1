@@ -6,6 +6,11 @@
 <button (click)="onAddServer()">Add a server</button>
 <form *ngIf="addServerFormVisible" (submit)="onSubmitNewServer($event)">
   <label for="addServerForm">Name</label>
-  <input type="text" id="addServerForm" [(ngModel)]="newServerName" />
+  <input
+    type="text"
+    id="addServerForm"
+    name="addServerForm"
+    [(ngModel)]="newServerName"
+  />
   <button type="submit">Submit</button>
 </form>

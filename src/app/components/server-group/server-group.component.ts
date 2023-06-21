@@ -15,7 +15,8 @@ export class ServerGroupComponent {
 
   onSubmitNewServer(event: any) {
     event.preventDefault();
-    this.newServerName = (<HTMLInputElement>event.target).value;
+    // this.newServerName = (<HTMLInputElement>event.target).value;
     console.log(this.newServerName);
+    this.newServerName = '';
   }
 }
